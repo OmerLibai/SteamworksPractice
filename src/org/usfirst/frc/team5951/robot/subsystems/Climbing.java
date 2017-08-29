@@ -22,7 +22,7 @@ public class Climbing extends Subsystem{
 	
 	private CANTalon cantalonClimbing;
 	
-	/*
+	/**
 	 * In the constructor the cantalonCliming is defined as a new CANTalon and the port is set.
 	 * 
 	 * Then the CANTalon control mode changes to precentVbus:
@@ -35,7 +35,7 @@ public class Climbing extends Subsystem{
 		
 	}
 	
-	/*
+	/**
 	 * The default command method gives no power for the CANTalon
 	 */
 	@Override
@@ -45,19 +45,19 @@ public class Climbing extends Subsystem{
 	
 	}
 	
-	/*
+	/**
 	 * The climingUp method turns the cantalonClimbing to one side in the highest speed: 1
 	 */
 	public void climbingUp () {
 		cantalonClimbing.set(1);
 	}
-	/*
+	/**
 	 * The climingDown method turns the cantalonClimbing to one side in the highest speed: -1
 	 */
 	public void climbingDown() {
 		cantalonClimbing.set(-1);	
 	}
-	/*
+	/**
 	 * The stop method gives no speed for the cantalonClimbing
 	 */
 	public void stop () {	

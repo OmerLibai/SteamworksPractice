@@ -43,7 +43,7 @@ public class InTakeCollectorCommmand extends Command{
 	}
 
 	// Called once after isFinished returns true
-	/*
+	/**
 	 * It runs the stopCollector method
 	 */
 	@Override

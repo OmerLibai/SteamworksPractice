@@ -6,10 +6,16 @@ import org.usfirst.frc.team5951.robot.subsystems.HPGear;
 import edu.wpi.first.wpilibj.command.Command;
 
 /**
- *
+ * Contains one private object of HPGear class (hpgear)
+ * A command that makes the robot open the push stick (by using the method openSlide)
  */
 public class OpenPush extends Command {
 	private HPGear hpgear;
+	/**
+	 * In the constructor the object hpgear is defined as a k_HPGEAR_SUBSYSTEM in 
+	 * Robot class.
+	 * It defines the subsystem that the comment refers to(GPGear) 
+	 */
     public OpenPush() {
         // Use requires() here to declare subsystem dependencies
     	hpgear = Robot.k_HPGEAR_SUBSYSTEM;
@@ -21,6 +27,9 @@ public class OpenPush extends Command {
     }
 
     // Called repeatedly when this Command is scheduled to run
+    /**
+	 * It runs the openPush method until it is told to stop
+	 */
     protected void execute() {
     	hpgear.openPush();
     }

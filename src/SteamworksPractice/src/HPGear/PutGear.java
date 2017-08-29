@@ -5,6 +5,8 @@ import edu.wpi.first.wpilibj.command.WaitCommand;
 
 /**
 * A command group For the HP Gear subsystem
+* it contains the two commands- openPush and openRaise
+* between the two command there is a 0.5 milliseconds wait command
 * It releases and pushes the gear (it is open after the commend runs) 
 */
 public class PutGear extends CommandGroup {

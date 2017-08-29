@@ -24,8 +24,7 @@ public class RobotMap {
 	
 	//Joysticks ports
 	public static final int k_SUBSYSTEMS_CONTROLLER_PORT = 0;
-	
-	//Joystick buttons port
+
 
 	
 	

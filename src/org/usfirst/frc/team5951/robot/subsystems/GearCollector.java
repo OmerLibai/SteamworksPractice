@@ -24,7 +24,7 @@ public class GearCollector extends Subsystem {
     private CANTalon cantalonCollector;
     private CANTalon cantalonRaise;
     
-    /*
+    /**
 	 * In the constructor:
 	 * the cantalonCollector is defined as a new CANTalon and the port is set.
 	 * the cantalonRaise is defined as a new CANTalon and the port is set.
@@ -38,7 +38,7 @@ public class GearCollector extends Subsystem {
     	cantalonCollector.changeControlMode(TalonControlMode.PercentVbus);
     	cantalonRaise.changeControlMode(TalonControlMode.PercentVbus);
     }
-    /*
+    /**
 	 * The default command gives no power for the CANTalons
 	 */
 	@Override
@@ -49,39 +49,39 @@ public class GearCollector extends Subsystem {
 		
 	}
 	
-	/*
+	/**
 	 * The inTake command turns the cantalonCollectorn to one side in the highest speed: 1
 	 */
 	public void inTake() {
 		cantalonCollector.set(-1);
 	}
-	/*
+	/**
 	 * The outTake command turns the cantalonCollectorn to the other side in the highest speed: 1
 	 */
 	public void outTake() {
 		cantalonCollector.set(1);
 		
 	}
-	/*
+	/**
 	 * The lower command turns the cantalonRaiser to one side in the highest speed: 1
 	 */
 	public void lower() {
 		cantalonCollector.set(-1);
 	}
-	/*
+	/**
 	 * The raise command turns the cantalonRaise to the other side in the highest speed: 1
 	 */
 	public void raise() {
 		cantalonCollector.set(1);
 		
 	}
-	/*
+	/**
 	 * The stopCollector command gives no speed for the cantalonCollector
 	 */
 	public void stopCollector() {
 		cantalonCollector.set(0);
 	}
-	/*
+	/**
 	 * The stopRaise command gives no speed for the cantalonRaise
 	 */
 	public void stopRaise() {
