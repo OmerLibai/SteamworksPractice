@@ -6,45 +6,45 @@ import org.usfirst.frc.team5951.robot.subsystems.HPGear;
 import edu.wpi.first.wpilibj.command.Command;
 
 /**
- * Contains one private object of HPGear class (hpgear)
- * A command that makes the robot close the push stick (by using the method openSlide)
+ * Contains one private object of HPGear class (hpgear) A command that makes the
+ * robot close the push stick (by using the method openSlide)
  */
 public class ClosePush extends Command {
 	private HPGear hpgear;
+
 	/**
-	 * In the constructor the object hpgear is defined as a k_HPGEAR_SUBSYSTEM in 
-	 * Robot class.
-	 * It defines the subsystem that the comment refers to(GPGear) 
+	 * In the constructor the object hpgear is defined as a k_HPGEAR_SUBSYSTEM in
+	 * Robot class. It defines the subsystem that the comment refers to(GPGear)
 	 */
-    public ClosePush() {
-        // Use requires() here to declare subsystem dependencies
-    	hpgear = Robot.k_HPGEAR_SUBSYSTEM;
-        requires(hpgear);
-    }
+	public ClosePush() {
+		// Use requires() here to declare subsystem dependencies
+		hpgear = Robot.k_HPGEAR_SUBSYSTEM;
+		requires(hpgear);
+	}
 
-    // Called just before this Command runs the first time
-    protected void initialize() {
-    }
+	// Called just before this Command runs the first time
+	protected void initialize() {
+	}
 
-    // Called repeatedly when this Command is scheduled to run
-    /**
+	// Called repeatedly when this Command is scheduled to run
+	/**
 	 * It runs the closePush method until it is told to stop
 	 */
-    protected void execute() {
-    	hpgear.closePush();
-    }
+	protected void execute() {
+		hpgear.closePush();
+	}
 
-    // Make this return true when this Command no longer needs to run execute()
-    protected boolean isFinished() {
-        return false;
-    }
+	// Make this return true when this Command no longer needs to run execute()
+	protected boolean isFinished() {
+		return false;
+	}
 
-    // Called once after isFinished returns true
-    protected void end() {
-    }
+	// Called once after isFinished returns true
+	protected void end() {
+	}
 
-    // Called when another command which requires one or more of the same
-    // subsystems is scheduled to run
-    protected void interrupted() {
-    }
+	// Called when another command which requires one or more of the same
+	// subsystems is scheduled to run
+	protected void interrupted() {
+	}
 }

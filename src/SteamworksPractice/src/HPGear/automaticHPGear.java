@@ -11,12 +11,12 @@ import edu.wpi.first.wpilibj.command.WaitCommand;
 * It releases and pushes the gear  and then
 * It raises the gear and brings back in the piston 
 */
-
-public class PutGetGear extends CommandGroup {
-	public PutGetGear() {
-		addSequential(new PutGear());
+//                                                                                               automaticHPGear= closeHPGear and OpenHPGear together ( i also didn't understand)
+public class automaticHPGear extends CommandGroup {
+	public automaticHPGear() {
+		addSequential(new OpenHPGear());
 		addSequential(new WaitCommand(0.5));
-		addSequential(new GetGear());
+		addSequential(new CloseHPGear());
 	}
 	
 }

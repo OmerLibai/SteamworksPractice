@@ -7,6 +7,7 @@ import SteamworksPractice.src.HPGear.GetGear;
 import SteamworksPractice.src.HPGear.OpenSlide;
 import SteamworksPractice.src.HPGear.PutGear;
 import SteamworksPractice.src.HPGear.PutGetGear;
+import SteamworksPractice.src.HPGear.ToggleSlide;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
@@ -15,25 +16,24 @@ import edu.wpi.first.wpilibj.buttons.JoystickButton;
  * interface to the commands and command groups that allow control of the robot.
  */
 public class OI {
-	//subsystem controller
-	public static final XboxController k_SUBSYSTEMS_CONTROLLER = new XboxController(RobotMap.k_SUBSYSTEMS_CONTROLLER_PORT);
-	
-	//Buttons
+	// subsystem controller
+	public static final XboxController k_SUBSYSTEMS_CONTROLLER = new XboxController(
+			RobotMap.k_SUBSYSTEMS_CONTROLLER_PORT);
+
+	// Buttons
 	public static final JoystickButton k_SLIDE_BUTTON = new JoystickButton(k_SUBSYSTEMS_CONTROLLER, xboxPorts.Y.get());
-	public static final JoystickButton k_PUT_GET_BUTTON = new JoystickButton(k_SUBSYSTEMS_CONTROLLER, xboxPorts.A.get());
-    public static final JoystickButton k_PUT_BUTTON = new JoystickButton (k_SUBSYSTEMS_CONTROLLER, xboxPorts.X.get());
-    public static final JoystickButton k_GET_BUTTON = new JoystickButton (k_SUBSYSTEMS_CONTROLLER, xboxPorts.B.get());
-    private HPGear hpgear;
-    
-    
+	public static final JoystickButton k_PUT_GET_BUTTON = new JoystickButton(k_SUBSYSTEMS_CONTROLLER,
+			xboxPorts.A.get());
+	public static final JoystickButton k_PUT_GEAR = new JoystickButton(k_SUBSYSTEMS_CONTROLLER, xboxPorts.X.get());
+	public static final JoystickButton k_GET_BUTTON = new JoystickButton(k_SUBSYSTEMS_CONTROLLER, xboxPorts.B.get());
+
 	public OI() {
-		hpgear = new HPGear();
-		if(hpgear.onOffSlide==true) {
-			k_SLIDE_BUTTON.whenPressed(new OpenSlide());
-		}
-		else {
-			k_SLIDE_BUTTON.whenPressed(new CloseSlide());
-		}
+		
+	     k_SLIDE_BUTTON.whenPressed(new ToggleSlide());
+	     
+	     
+		
+		
 		
 			k_PUT_GET_BUTTON.whenPressed(new PutGetGear());
 		
@@ -41,24 +41,24 @@ public class OI {
 			
 			k_GET_BUTTON .whenPressed(new GetGear());
 			
+			
+			
 			//joysticks and POV
 			
 			
 	}
 }
 
-	enum xboxPorts {
-		Y(0),
-		A(1),
-		X(2),
-		B(3);
-		
-		private int port;
-		
-		xboxPorts(int port) {
-			this.port = port;			
-		}
-		public int get() {
-			return port;
-		}
+enum xboxPorts {
+	Y(0), A(1), X(2), B(3);
+
+	private int port;
+
+	xboxPorts(int port) {
+		this.port = port;
 	}
+
+	public int get() {
+		return port;
+	}
+}

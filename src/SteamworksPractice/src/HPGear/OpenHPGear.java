@@ -9,9 +9,9 @@ import edu.wpi.first.wpilibj.command.WaitCommand;
 * between the two command there is a 0.5 milliseconds wait command
 * It releases and pushes the gear (it is open after the commend runs) 
 */
-public class PutGear extends CommandGroup {
+public class OpenHPGear extends CommandGroup {
 
-    public PutGear() {
+    public OpenHPGear() {
         // Add Commands here:
          addSequential(new OpenRaise());
          addSequential(new WaitCommand(0.5));

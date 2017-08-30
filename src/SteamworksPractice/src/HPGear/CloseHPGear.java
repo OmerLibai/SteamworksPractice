@@ -9,9 +9,9 @@ import edu.wpi.first.wpilibj.command.WaitCommand;
 * between the two command there is a 0.5 milliseconds wait command
 * It raises the gear and brings back in the piston (it is closed after the commend runs)
 */
-public class GetGear extends CommandGroup {
-
-    public GetGear() {
+public class CloseHPGear extends CommandGroup {
+//was get gear
+    public CloseHPGear() {
         // Add Commands here:
     	addSequential(new ClosePush());
     	addSequential(new WaitCommand(0.5));
