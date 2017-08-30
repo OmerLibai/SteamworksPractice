@@ -1,9 +1,6 @@
 package SteamworksPractice.src.HPGear;
 
-import org.usfirst.frc.team5951.robot.Robot;
-import org.usfirst.frc.team5951.robot.subsystems.HPGear;
 
-import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.CommandGroup;
 
 public class ToggleSlide extends CommandGroup {
@@ -20,3 +17,4 @@ public class ToggleSlide extends CommandGroup {
 			IsSlideOpen = true;
 		}
 	}
+}

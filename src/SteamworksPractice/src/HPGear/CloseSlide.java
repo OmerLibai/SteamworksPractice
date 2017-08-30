@@ -39,13 +39,10 @@ public class CloseSlide extends Command{
 		// TODO Auto-generated method stub
 		return false;
 	}
-	/**
-	 * after the command ends, the onOffSlide is equal to true to know that the slide is closed
-	*/
+	
 	@Override
 	protected void end() {
 		// TODO Auto-generated method stub
-		HPGear.onOffSlide = true;
 	}
 
 	@Override

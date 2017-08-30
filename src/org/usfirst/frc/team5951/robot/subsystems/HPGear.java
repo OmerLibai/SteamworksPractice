@@ -26,7 +26,6 @@ public class HPGear extends Subsystem {
 	private DoubleSolenoid slide;
 	private DoubleSolenoid push;
 	private DoubleSolenoid raise;
-	public static boolean onOffSlide;
 	
 	/**
 	 * In the constructor:

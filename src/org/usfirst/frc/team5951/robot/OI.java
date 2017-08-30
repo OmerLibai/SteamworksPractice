@@ -1,12 +1,9 @@
 package org.usfirst.frc.team5951.robot;
 
-import org.usfirst.frc.team5951.robot.subsystems.HPGear;
 
-import SteamworksPractice.src.HPGear.CloseSlide;
-import SteamworksPractice.src.HPGear.GetGear;
-import SteamworksPractice.src.HPGear.OpenSlide;
-import SteamworksPractice.src.HPGear.PutGear;
-import SteamworksPractice.src.HPGear.PutGetGear;
+import SteamworksPractice.src.HPGear.AutomaticHPGear;
+import SteamworksPractice.src.HPGear.CloseHPGear;
+import SteamworksPractice.src.HPGear.OpenHPGear;
 import SteamworksPractice.src.HPGear.ToggleSlide;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
@@ -22,9 +19,9 @@ public class OI {
 
 	// Buttons
 	public static final JoystickButton k_SLIDE_BUTTON = new JoystickButton(k_SUBSYSTEMS_CONTROLLER, xboxPorts.Y.get());
-	public static final JoystickButton k_PUT_GET_BUTTON = new JoystickButton(k_SUBSYSTEMS_CONTROLLER,
+	public static final JoystickButton k_AUTO_HPGEAR_BUTTON = new JoystickButton(k_SUBSYSTEMS_CONTROLLER,
 			xboxPorts.A.get());
-	public static final JoystickButton k_PUT_GEAR = new JoystickButton(k_SUBSYSTEMS_CONTROLLER, xboxPorts.X.get());
+	public static final JoystickButton k_PUT_BUTTON = new JoystickButton(k_SUBSYSTEMS_CONTROLLER, xboxPorts.X.get());
 	public static final JoystickButton k_GET_BUTTON = new JoystickButton(k_SUBSYSTEMS_CONTROLLER, xboxPorts.B.get());
 
 	public OI() {
@@ -35,11 +32,11 @@ public class OI {
 		
 		
 		
-			k_PUT_GET_BUTTON.whenPressed(new PutGetGear());
+			k_AUTO_HPGEAR_BUTTON.whenPressed(new AutomaticHPGear());
 		
-			k_PUT_BUTTON .whenPressed(new PutGear());
+			k_PUT_BUTTON .whenPressed(new OpenHPGear());
 			
-			k_GET_BUTTON .whenPressed(new GetGear());
+			k_GET_BUTTON .whenPressed(new CloseHPGear());
 			
 			
 			

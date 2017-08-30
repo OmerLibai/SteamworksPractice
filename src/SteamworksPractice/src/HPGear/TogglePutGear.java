@@ -9,15 +9,14 @@ public class TogglePutGear extends CommandGroup {
 	protected void initalize() {
 		
 		if(IsGearPut) {
-		addSequential(new open());
-		IsGearPut= false;
-}
-	else {
-		addSequential(new CloseRaise());
-	IsGearPut= true;
+			addSequential(new OpenRaise());
+			IsGearPut= false;
+		}
+		else {
+			addSequential(new CloseRaise());
+			IsGearPut= true;		
 		
-		
-	}
+		}
 	
-
+	}
 }
