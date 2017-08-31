@@ -1,15 +1,14 @@
-package SteamworksPractice.src.org.first.frc.team5951.robot.Chassis;
+package util;
 
 import edu.wpi.first.wpilibj.command.Command;
 
 /**
  *
  */
-public class TurnToAngle extends Command {
+public class WaitCommand extends Command {
 
-    public TurnToAngle() {
-        // Use requires() here to declare subsystem dependencies
-        // eg. requires(chassis);
+    public WaitCommand() {
+        
     }
 
     // Called just before this Command runs the first time

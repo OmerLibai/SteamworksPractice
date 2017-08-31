@@ -24,8 +24,23 @@ public class RobotMap {
 	
 	//Joysticks ports
 	public static final int k_SUBSYSTEMS_CONTROLLER_PORT = 0;
-
+	public static final int k_DRIVERS_CONTROLLER_PORT = 1;
 
 	
+	// Chassis
+	// Robot B ports
+	public static final int k_CHASSIS_RIGHT_FRONT_TALON = 3;
+	public static final int k_CHASSIS_RIGHT_REAR_TALON = 4;
+	public static final int k_CHASSIS_LEFT_FRONT_TALON = 1;
+	public static final int k_CHASSIS_LEFT_REAR_TALON = 2;
 	
+	public static final int k_PCM = 0;
+
+	public static final int k_CHASSIS_ENCODER_LEFT_A = 4;
+	public static final int k_CHASSIS_ENCODER_LEFT_B = 5;
+	public static final int k_CHASSIS_ENCODER_RIGHT_A = 6;
+	public static final int k_CHASSIS_ENCODER_RIGHT_B = 7;
+	
+	public static final int k_CHASSIS_SHIFTERS_OPEN = 3;
+	public static final int k_CHASSIS_SHIFTERS_CLOSE = 2;
 }

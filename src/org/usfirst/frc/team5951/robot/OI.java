@@ -5,6 +5,7 @@ import SteamworksPractice.src.HPGear.AutomaticHPGear;
 import SteamworksPractice.src.HPGear.CloseHPGear;
 import SteamworksPractice.src.HPGear.OpenHPGear;
 import SteamworksPractice.src.HPGear.ToggleSlide;
+import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
@@ -16,7 +17,8 @@ public class OI {
 	// subsystem controller
 	public static final XboxController k_SUBSYSTEMS_CONTROLLER = new XboxController(
 			RobotMap.k_SUBSYSTEMS_CONTROLLER_PORT);
-
+	public static final Joystick k_DRIVER_JOYSTICK = new Joystick(
+			RobotMap.k_DRIVERS_CONTROLLER_PORT);
 	// Buttons
 	public static final JoystickButton k_SLIDE_BUTTON = new JoystickButton(k_SUBSYSTEMS_CONTROLLER, xboxPorts.Y.get());
 	public static final JoystickButton k_AUTO_HPGEAR_BUTTON = new JoystickButton(k_SUBSYSTEMS_CONTROLLER,

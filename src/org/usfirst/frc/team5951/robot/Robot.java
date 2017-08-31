@@ -1,12 +1,13 @@
 
 package org.usfirst.frc.team5951.robot;
 
+import org.usfirst.frc.team5951.robot.commands.chassis.DriveStraight;
 import org.usfirst.frc.team5951.robot.subsystems.Chassis;
+import org.usfirst.frc.team5951.robot.subsystems.ChassisArcade;
 import org.usfirst.frc.team5951.robot.subsystems.Climbing;
 import org.usfirst.frc.team5951.robot.subsystems.GearCollector;
 import org.usfirst.frc.team5951.robot.subsystems.HPGear;
 
-import SteamworksPractice.src.org.first.frc.team5951.robot.Chassis.DriveStraight;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
@@ -27,7 +28,7 @@ public class Robot extends IterativeRobot {
 	public static final Climbing k_CLIMBING_SUBSYSTEM = new Climbing();
 	public static final GearCollector k_GEAR_COLLECTER_SUBSYSTEM = new GearCollector();
 	public static final HPGear k_HPGEAR_SUBSYSTEM = new HPGear();
-	
+	public static final ChassisArcade chassisArcade = new ChassisArcade();
 	public static OI oi;
 
 	Command autonomousCommand;
@@ -40,7 +41,7 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void robotInit() {
 		oi = new OI();
-		chooser.addDefault("Default Auto", new DriveStraight());
+		chooser.addDefault("Default Auto", new DriveStraight(1)); //TODO change parameter or code.
 		// chooser.addObject("My Auto", new MyAutoCommand());
 		SmartDashboard.putData("Auto mode", chooser);
 	}
